@@ -16,14 +16,31 @@ section{
     min-height: 100vh;
     overflow: hidden;
 }
-section .text{
+section.font-anime .text{
     position: relative;
     font-size: 5em;
     text-align: center;
     color: #dc6868;
      -webkit-box-reflect: below -0.66em linear-gradient(transparent, #0004 );
 }
-section .text span{
+section.font-anime .text span{
     position: relative;
     display: inline-block;
+}
+section.back-anime .text{
+    position: relative;
+    text-align: center;
+    color: aqua;
+    max-width: 650px;
+
+}
+
+section.back-anime .text span{
+    width: .3em;
+    height: 1em;
+    border-radius: .2em;
+    background: linear-gradient(114deg, rgba(240,193,134,0.8547794117647058) 20%, rgba(237,152,119,1) 50%, rgba(240,193,134,0.8519782913165266) 80%);
+    display: inline-block;
+    filter: blur(.1em);
+    -webkit-filter: blur(.1em);
 }
