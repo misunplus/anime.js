@@ -77,18 +77,33 @@ for(let i = 0; i < rand100; i++){
     backImgAppendTag.appendChild(span)
 }
 
-const items = document.querySelectorAll('section.back-anime .text span');
+// const items = document.querySelectorAll('section.back-anime .text span');
 
-items.forEach(item =>{
-    let rand500 = Math.floor(Math.random() * 1001);
-    item.style.transform = `translate(${rand500}px, ${rand500}px )`
-})
+// items.forEach(item =>{
+//     let rand500 = Math.floor(Math.random() * 1001);
+//     item.style.transform = `translate(${rand500}px, ${rand500}px )`
+// })
+
 var animation = anime.timeline({
     easing: 'easeOutExpo',
-    duration: 10000,
+    duration: 0,
     loop: true,
   });
   animation
+
+  .add({
+    targets: 'section.back-anime .text span',
+    rotate: function(){
+        return anime.random(0, 90);
+    },
+    translateX: function(){
+        return anime.random(-500, 500)
+    },
+    translateY: function(){
+        return anime.random(-500, 500)
+    },
+    duration:0,
+  })
   .add({
     targets: 'section.back-anime .text span',
     rotate: function(){
